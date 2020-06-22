@@ -1,0 +1,12 @@
+{% layout '404' %}
+      
+  <div class="utility-page-wrap">
+    <div class="utility-page-content w-form"><img src="https://d3e54v103j8qbb.cloudfront.net/static/page-not-found.211a85e40c.svg" alt="">
+      <h2>{{ '404.H2_0' | t }}</h2>
+      <div class="div-block-302">{{ '404.DIV_1' | t }}</div><a href="/pages/old-home" class="main-button w-button">{{ '404.A_2' | t }}</a></div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5eed6d30cb5030b8331a4ef5" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="{{ 'sampleshopifytemplate-783f9efad63d29184.js' | asset_url }}" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+{% include 'notifications' %}{{ 'udesly-shopify.min.js' | asset_url | script_tag }}{{ 'option_selection.js' | shopify_asset_url | script_tag }}

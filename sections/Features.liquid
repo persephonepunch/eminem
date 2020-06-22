@@ -1,0 +1,74 @@
+
+
+      <div class="w-layout-grid content1-grid">
+        <div id="w-node-9b3b9afa6619-041a4f03" class="content1-column">
+          <div class="size1-text size1-top-clear">{{ section.settings.left_title }}</div>
+          <div class="content1-content-wrap">
+            <div class="content1-image-wrap">
+              <a data-w-id="33d2f058-eb0a-6998-ec91-9b3b9afa661e" style="opacity:0" href="{{ section.settings.left_link }}" class="item-overlay w-inline-block">
+                <div class="button-small white-small">
+                  <div>View Product</div>
+                </div>
+              </a>
+              <div class="content1-image" style="background-image: url({{ section.settings.left_image | img_url: 'large' }})"></div>
+            </div><a href="#" class="size6-link">New York - 5h Avenue</a></div>
+        </div>
+        <div id="w-node-9b3b9afa6627-041a4f03" class="content1-column">
+          <div class="content1-content-wrap content1-right-column">
+            <div class="content1-image-wrap">
+              <a data-w-id="33d2f058-eb0a-6998-ec91-9b3b9afa662a" style="opacity:0" href="{{ section.settings.right_link }}" class="item-overlay w-inline-block">
+                <div class="button-small white-small">
+                  <div>View Product</div>
+                </div>
+              </a>
+              <div class="content1-image2" style="background-image: url({{ section.settings.right_image | img_url: 'large' }})"></div>
+            </div><a href="#" class="size6-link size6-bottom-clear">Nature Organic</a></div>
+          <div class="content1-quote-wrap">
+            <div class="size1-text">{{ section.settings.right_title }}</div>
+            <div class="text-label">John doe - CEO &amp; FOUNDER</div>
+          </div>
+        </div>
+      </div>
+    
+
+{% schema %}
+{
+  "name": "Features",
+  "class": "section-3",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "left_title",
+      "label": "Left Title",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "type": "text",
+      "id": "right_title",
+      "label": "Right Title",
+      "default": "“Beautiful designs, easy shopping experience.”"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Image"
+    },
+    {
+      "type": "url",
+      "id": "left_link",
+      "label": "Left Link"
+    },
+    {
+      "type": "url",
+      "id": "right_link",
+      "label": "Right Link"
+    }
+  ]
+}
+{% endschema %}

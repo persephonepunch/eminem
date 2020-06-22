@@ -1,0 +1,54 @@
+
+
+      <div class="container-box">
+        <div data-w-id="33d2f058-eb0a-6998-ec91-9b3b9afa663a" style="width:0%" class="container-box__box">
+          <div class="description__container">
+            <h6 style="opacity:0;-webkit-transform:translate3d(0, 20PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="container_subtitle">WED - FRI, 5 - 7 FEBRUARY</h6>
+            <h1 data-w-id="33d2f058-eb0a-6998-ec91-9b3b9afa663e" style="opacity:0" class="container__title mobile">A collective exhibition of<br>young talents.</h1>
+            <div class="w-layout-grid container__grid-2">
+              <div data-w-id="33d2f058-eb0a-6998-ec91-9b3b9afa6643" style="opacity:0" class="grid__wrap-pharagraph">
+                <p class="wrap__paragraph">Sed commodo elementum quam nec eleifend. Ut eget semper lectus, non hendrerit felis. Vivamus finibus lacus et dignissim aliquam. </p>
+                <p class="wrap__paragraph"> Maecenas dui erat, vestibulum a turpis vitae. Sed commodo elementum quam nec eleifend. Maecenas dui erat, vestibulum a turpis vitae. Sed commodo elementum quam nec eleifend. Sed commodo elementum quam nec eleifend. Sed commodo elementum quam nec eleifend. </p>
+              </div>
+              <div class="wrap__slider">
+                <div data-animation="slide" data-duration="500" data-infinite="1" data-w-id="33d2f058-eb0a-6998-ec91-9b3b9afa6649" style="opacity:0" class="slider w-slider">
+                  <div class="slide__mask w-slider-mask">
+                    {% for block in section.blocks %}{% if block.type == "slides" %}<div class="mask__first-slide w-slide" {{block.shopify_attributes}}>
+                      <div class="first-slide__bg-two" style="background-image: url({{ block.settings.slide_image | img_url: 'large' }})"></div>
+                    </div>{% endif %}{% endfor %}
+                  </div>
+                  <div class="mask__left-arrow w-slider-arrow-left">
+                    <div class="w-icon-slider-left"></div>
+                  </div>
+                  <div class="mask__right-arrow w-slider-arrow-right">
+                    <div class="w-icon-slider-right"></div>
+                  </div>
+                  <div class="mask__slide-nav w-slider-nav w-round"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+{% schema %}
+{
+  "name": "Program",
+  "class": "section-program",
+  "tag": "div",
+  "blocks": [
+    {
+      "name": "slides",
+      "type": "slides",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
